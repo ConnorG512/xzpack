@@ -9,7 +9,7 @@ echo -e "Creating Tar...\n"
 # create the tar file
 tar -cvf "${target_name}.tar" "${target_name}"
 
-echo -e "Compressing with xz with 12G limit...\n"
+echo -e "Compressing tar using xz with a 12G limit...\n"
 # xz compression
 xz -T0 -v --best --memlimit-compress=12G "${target_name}.tar"
 
